@@ -29,23 +29,7 @@ const App = () => {
     fetchData();
   }, []);
 
-  const data = {
-    calories: "516 kcal",
-    carbos: "47 g",
-    description:
-      "There\u2019s nothing like the simple things in life - the smell of freshly cut grass, sitting outside on a nice sunny day, spending time with friends and family. Well here is a recipe that delivers simple culinary pleasures - some nice fresh fish with a crispy crust, crunchy potato wedges and some delightfully sweet sugar snap peas flavoured with cooling mint. Slip into something comfortable and relax into a delicious dinner!",
-    difficulty: 0,
-    fats: "8 g",
-    headline: "with Sweet Potato Wedges and Minted Snap Peas",
-    id: "533143aaff604d567f8b4571",
-    image:
-      "https://img.hellofresh.com/f_auto,q_auto/hellofresh_s3/image/533143aaff604d567f8b4571.jpg",
-    name: "Crispy Fish Goujons ",
-    proteins: "43 g",
-    thumb:
-      "https://img.hellofresh.com/f_auto,q_auto,w_300/hellofresh_s3/image/533143aaff604d567f8b4571.jpg",
-    time: "PT35M",
-  };
+
   return (
     <SafeAreaView style={styles.main}>
       <StatusBar />
@@ -62,7 +46,7 @@ const App = () => {
                 <Text style={styles.borderLine}>
                   Difficulty : {item.difficulty}
                 </Text>
-                <Text>Description: {item.description}</Text>
+                <Text style={styles.itemDescp}>Description: {item.description}</Text>
                 <View style={styles.itemValues}>
                   <Text style={styles.borderLine}>Approx values</Text>
                   <Text>calories:{item.calories}</Text>
@@ -86,7 +70,10 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     width: "100%",
-    backgroundColor: "white",
+    backgroundColor: "#ffff",
+  },
+  itemDescp:{
+    fontSize:8
   },
   itemImage: {
     width: 200,
@@ -104,7 +91,7 @@ const styles = StyleSheet.create({
     margin: 15,
     padding: 15,
     flexDirection: "column",
-    backgroundColor: "lightgray",
+    backgroundColor: "#EEEEEE",
   },
   itemHeadline: {
     fontWeight: "normal",
